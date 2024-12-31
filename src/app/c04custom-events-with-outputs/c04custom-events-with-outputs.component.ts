@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-c04custom-events-with-outputs',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './c04custom-events-with-outputs.component.css'
 })
 export class C04customEventsWithOutputsComponent {
-
+  @Output() myEvent = new EventEmitter<string>()
+  myEventEmitter() {
+    console.log('myEventEmitter()');
+    this.myEvent.emit('Hello from myEventEmitter()');
+  }
 }

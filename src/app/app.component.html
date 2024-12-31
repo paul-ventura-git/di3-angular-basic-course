@@ -14,8 +14,10 @@
     [someBooleanAttribute]="'true'"
     [someNumberAttribute]="'42'"
     [inputWithAlias]="'This is an input with an alias'"
-
   ></app-c03input-properties>
+  <app-c04custom-events-with-outputs
+    (myEvent)="myEventEmitter()"
+  ></app-c04custom-events-with-outputs>
 </main>
 
 <router-outlet />
