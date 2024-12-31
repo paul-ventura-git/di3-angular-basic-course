@@ -6,7 +6,11 @@
   <h1>Angular 18 tutorial</h1>
   <app-c01expressions></app-c01expressions>
   <app-c02components></app-c02components>
-  <app-c03input-properties [value]="50"></app-c03input-properties>
+  <app-c03input-properties
+    [value]="50"
+    [requiredInput]="'This is a required input'"
+    [transformedInput]="'      This is an input with a transform        '"
+  ></app-c03input-properties>
 </main>
 
 <router-outlet />
