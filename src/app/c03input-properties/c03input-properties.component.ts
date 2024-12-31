@@ -24,7 +24,7 @@ export class C03inputPropertiesComponent {
     this.internalValue = newValue;
   }
 
-  private internalValue = 0;
+  private internalValue = 7000;
 }
 
 function trimString(value: string | undefined) {
