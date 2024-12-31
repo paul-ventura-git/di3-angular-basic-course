@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
 export class C01expressionsComponent {
 
   myCol: string = 'lightblue';
-  quantity: any;
-  cost: any;
+  quantity: number = 4889;
+  cost: number = 4488.99;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-c03input-properties',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './c03input-properties.component.css'
 })
 export class C03inputPropertiesComponent {
-
+  @Input() value = 0;
 }
