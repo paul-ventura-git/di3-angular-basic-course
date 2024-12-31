@@ -14,6 +14,17 @@ export class C03inputPropertiesComponent {
   @Input({transform: appendPx}) typeCheckedInput: string = '';
   @Input({transform: booleanAttribute}) someBooleanAttribute = false; // 'true' or 'false' string will be converted to boolean
   @Input({transform: numberAttribute}) someNumberAttribute = 0; // attempts to parse the given value to a number, producing NaN if parsing fails.
+  @Input({alias: 'inputWithAlias'}) inputWithoutAlias = '';
+  @Input()
+  get myValue(): number {
+    return this.internalValue;
+  }
+
+  set myValue(newValue: number) {
+    this.internalValue = newValue;
+  }
+
+  private internalValue = 0;
 }
 
 function trimString(value: string | undefined) {
@@ -37,4 +48,14 @@ function appendPx(value: string | number | undefined) {
  *
  * Input transform functions should always be pure functions.
  * Relying on state outside of the transform function can lead to unpredictable behavior.
+ *
+ * Prefer using input transforms instead of getters and setters if possible.
+ * Avoid complex or costly getters and setters.
+ * Angular may invoke an input's setter multiple times, which may negatively impact application performance
+ * if the setter performs any costly behaviors, such as DOM manipulation.
+ *
+ *
+ *
+ *
+ *
  */
