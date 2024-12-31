@@ -9,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class C03inputPropertiesComponent {
   @Input() value = 0;
+  @Input() requiredInput = 'Something mandatory';
+  @Input({transform: trimString}) transformedInput = '   Something with spaces   ';
+}
+
+function trimString(value: string | undefined) {
+  return value?.trim() ?? '';
 }

@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './c01expressions.component.css'
 })
 export class C01expressionsComponent {
-
   myCol: string = 'lightblue';
   quantity: number = 4889;
   cost: number = 4488.99;
