@@ -5,7 +5,9 @@ import { booleanAttribute, Component, Input, numberAttribute } from '@angular/co
   standalone: true,
   imports: [],
   templateUrl: './c03input-properties.component.html',
-  styleUrl: './c03input-properties.component.css'
+  styleUrl: './c03input-properties.component.css',
+  // If 'CustomClass' inherits 'withDecorator' property from 'BaseClass' this way, then 'withDecorator' property will be available in the template.
+  inputs: ['withDecorator'] // inputs to inherit from the superclass
 })
 export class C03inputPropertiesComponent {
   @Input() value = 0;
@@ -25,6 +27,8 @@ export class C03inputPropertiesComponent {
   }
 
   private internalValue = 7000;
+
+  @Input() withDecorator = false;
 }
 
 function trimString(value: string | undefined) {
