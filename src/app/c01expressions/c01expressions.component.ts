@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class C01expressionsComponent {
 
+  myCol: string = 'lightblue';
+  quantity: any;
+  cost: any;
 }
