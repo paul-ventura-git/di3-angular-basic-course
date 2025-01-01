@@ -7,6 +7,7 @@ import { C04customEventsWithOutputsComponent } from "./c04custom-events-with-out
 import { C05functionBasedOutputsComponent } from './c05function-based-outputs/c05function-based-outputs.component';
 import { C06ngContentComponent } from './c06ng-content/c06ng-content.component';
 import { C00randomComponentComponent } from './c00random-component/c00random-component.component';
+import { C00cardComponent } from "./c00card/c00card.component";
 
 @Component({
   selector: 'app-root',
@@ -19,8 +20,9 @@ import { C00randomComponentComponent } from './c00random-component/c00random-com
     C04customEventsWithOutputsComponent,
     C05functionBasedOutputsComponent,
     C06ngContentComponent,
-    C00randomComponentComponent
-  ],
+    C00randomComponentComponent,
+    C00cardComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
