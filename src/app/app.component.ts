@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { C01expressionsComponent } from "./c01expressions/c01expressions.component";
 import { C02componentsComponent } from "./c02components/c02components.component";
@@ -15,9 +15,10 @@ import { C05functionBasedOutputsComponent } from './c05function-based-outputs/c0
 })
 export class AppComponent {
   title = 'di3-angular-basic-course';
-  quantity = 0;
 
-  public updateQuantity(quantity: number) {
-    this.quantity = quantity;
+public otherQuantity = input.required<number>();
+
+  public updateQuantity(newQuantity: number) {
+    console.log(newQuantity);
   }
 }
